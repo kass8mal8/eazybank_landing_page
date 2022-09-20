@@ -8,6 +8,10 @@ a {
     color: hsl(233, 8%, 62%);
 }
 
+button {
+    cursor: pointer;
+}
+
 .socials img {
     margin: auto 5px;
 }
@@ -19,6 +23,7 @@ a :hover{
 body {
     font-family: nunito sans;
     font-weight: 500;
+    font-size: 18px;
 }
 
 .container ,.services,.article{
@@ -53,10 +58,14 @@ body {
     list-style: none;
 }
 
-.menu {
+.menu,.close {
     cursor: pointer;
     position: absolute;
     right: 15px;
+}
+
+.close {
+    display: none;
 }
  
 .logo {
@@ -171,20 +180,25 @@ section ,.easy-reason{
         display: none;
     } 
    
-    
 }
 
-@media  screen and (min-width:375px) {
+@media screen and (min-width : 376px) {
     .bg-intro {
         background-image: url('../assets/images/bg-intro-desktop.svg')
     }
 }
 
 @media screen and (min-width:800px) {
+    .bg-intro {
+        background-image: url('../assets/images/bg-intro-desktop.svg')
+    }
     .main-content {
         display:flex;
         flex-direction: row-reverse;
         margin-top: 5%;
+    }
+    .intro-text ,section {
+        text-align: start;
     }
     .sidebar {
         display: block;
@@ -283,4 +297,26 @@ section ,.easy-reason{
         color: hsl(233, 8%, 62%);
     }
    
+}
+
+@media screen and (max-width : 768px) {
+    .sidebar.active {
+        background-color: hsl(0, 0%, 100%);
+        width: 80%;
+        padding: 10px;
+        border: 1px solid hsl(0, 0%, 100%);
+        border-radius: 3px;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        z-index: 4;
+        color: hsl(233, 26%, 24%);
+    }
+    .sidebar ul li {
+        margin: 10px 30%;
+        justify-items: center;
+    }
+    .copyright {
+        font-size: small;
+    }
 }
