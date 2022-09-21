@@ -284,9 +284,3 @@ section ,.easy-reason{
     }
    
 }
-
-@media screen and (min-width:375) and (max-width:800px) {
-    .services {
-        grid-template-columns: 50% 50%;
-    }
-}
