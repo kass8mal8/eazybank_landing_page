@@ -1,0 +1,191 @@
+@font-face {
+    font-family: nunito sans;
+    src: url("../assets/font/NunitoSans-Regular.ttf");
+}
+
+body {
+    font-family: nunito sans;
+    font-weight: 500;
+}
+
+.container ,.services,.article{
+    width: 95%;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.header-intro {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: center;
+    background: white;
+   
+}
+
+.sidebar {
+    display: none;
+    transition: .4s ease;
+}
+
+.sidebar button {
+    display: none;
+}
+
+.sidebar.active {
+    display: block;
+    transition: .4s ease;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.menu {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+}
+ 
+.logo {
+    left: 20px;
+    position: absolute;
+    z-index: 3;
+}
+
+.bg-intro {
+    width: 97vw;
+    margin-left: -8px;
+    margin-top: 20px;
+}
+
+.intro-text {
+    width: 95%;
+    padding: 10px;
+    margin: 30px 10px 0px 0px;
+    text-align: center;
+}
+
+h2,h3 {
+    color: hsl(233, 26%, 24%)
+}
+
+p {
+    color:  hsl(233, 8%, 62%);
+}
+
+.intro-text button {
+    color: hsl(0, 0%, 100%);
+    padding: 10px;
+    padding-inline: 20px;
+    outline: none;
+    font-family: nunito sans;
+    border: 1px solid hsl(192, 70%, 51%);
+    border-radius: 30px;
+    background-image: linear-gradient(to right,hsl(136, 65%, 51%) ,hsl(192, 70%, 51%)) ;
+}
+
+.mockups {
+    margin-left: 10%;
+    justify-content: center;
+}
+
+small {
+    color:  hsl(232, 32%, 86%);
+    margin-top: 10px;
+}
+
+.article div img {
+    border-radius: 5px;
+    width: 100%;
+    height: 40%;
+}
+
+.article div {
+    width: 100%;
+}
+
+footer {
+    background-color:hsl(233, 26%, 24%) ;
+}
+
+.article-heading {
+    margin: 0px 20px;
+}
+
+@media  screen and (max-width:375px) {
+    .bg-intro {
+        background-image: url('../assets/images/bg-intro-mobile.svg')
+    }
+    .easy-reason,section {
+        text-align: center;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+@media  screen and (min-width:375px) {
+    .bg-intro {
+        background-image: url('../assets/images/bg-intro-desktop.svg')
+    }
+}
+
+@media screen and (min-width:800px) {
+    .main-content {
+        display:flex;
+        flex-direction: row-reverse;
+        margin-top: 5%;
+    }
+    .sidebar {
+        display: block;
+        position: absolute;
+        top: 13px;
+        right: 0px;
+    }
+    .sidebar button {
+        display: block;
+        color: hsl(0, 0%, 100%);
+        padding: 10px;
+        padding-inline: 20px;
+        outline: none;
+        font-family: nunito sans;
+        border: 1px solid hsl(192, 70%, 51%);
+        border-radius: 30px;
+        background-image: linear-gradient(to right,hsl(136, 65%, 51%) ,hsl(192, 70%, 51%)) ;
+    }
+    .sidebar ul li {
+        display: inline-flex;
+        margin: 0px 10px;
+        justify-content: space-between;
+    }
+    .menu {
+        display: none;
+    }
+    .services,.article {
+        width: 95%;
+        padding: 10px;
+        margin: 0px 10px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    .easy-reason {
+        width: 95%;
+        padding: 10px;
+        margin: 0px 10px;
+        display: grid;
+        grid-template-columns: 50%;
+        margin-top: -20%;
+        margin-bottom: 10%;
+    }
+    aside {
+        padding: 20px;
+    }
+   
+}
+
+@media screen and (min-width:375) and (max-width:800px) {
+    .services {
+        grid-template-columns: 50% 50%;
+    }
+}
